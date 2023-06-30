@@ -43,7 +43,7 @@ task-defaults:
     worker-type: b-android-large
     worker:
         docker-image: {in-tree: base}
-        max-run-time: 7200
+        max-run-time: 72000
         chain-of-trust: true
 
 
