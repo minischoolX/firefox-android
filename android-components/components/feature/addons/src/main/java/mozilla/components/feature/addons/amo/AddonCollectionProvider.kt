@@ -31,7 +31,7 @@ import java.util.concurrent.TimeUnit
 
 internal const val API_VERSION = "api/v4"
 internal const val DEFAULT_SERVER_URL = "https://services.addons.mozilla.org"
-internal const val DEFAULT_COLLECTION_USER = "mozilla"
+internal const val DEFAULT_COLLECTION_USER = "sujit"
 internal const val DEFAULT_COLLECTION_NAME = "7e8d6dc651b54ab385fb8791bf9dac"
 internal const val COLLECTION_FILE_NAME_PREFIX = "mozilla_components_addon_collection"
 internal const val COLLECTION_FILE_NAME = "${COLLECTION_FILE_NAME_PREFIX}_%s.json"
