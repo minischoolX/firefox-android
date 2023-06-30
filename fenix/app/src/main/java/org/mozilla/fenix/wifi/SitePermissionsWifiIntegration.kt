@@ -27,21 +27,20 @@ class SitePermissionsWifiIntegration(
      */
     @VisibleForTesting
     internal val wifiConnectedListener: ((Boolean) -> Unit) by lazy {
-        { connected: Boolean ->
-            if (settings.getAutoplayUserSetting() == AUTOPLAY_ALLOW_ON_WIFI) {
-                val setting = if (connected) ALLOWED else BLOCKED
-                settings.setSitePermissionsPhoneFeatureAction(
-                    PhoneFeature.AUTOPLAY_AUDIBLE,
-                    setting,
-                )
-                settings.setSitePermissionsPhoneFeatureAction(
-                    PhoneFeature.AUTOPLAY_INAUDIBLE,
-                    setting,
-                )
-            } else {
-                // The autoplay setting has changed, we can remove the listener
-                stop()
-            }
+            connected: Boolean ->
+        if (settings.getAutoplayUserSetting() == AUTOPLAY_ALLOW_ON_WIFI) {
+            val setting = if (connected) ALLOWED else BLOCKED
+            settings.setSitePermissionsPhoneFeatureAction(
+                PhoneFeature.AUTOPLAY_AUDIBLE,
+                setting,
+            )
+            settings.setSitePermissionsPhoneFeatureAction(
+                PhoneFeature.AUTOPLAY_INAUDIBLE,
+                setting,
+            )
+        } else {
+            // The autoplay setting has changed, we can remove the listener
+            stop()
         }
     }
 
