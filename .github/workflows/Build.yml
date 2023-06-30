@@ -41,7 +41,7 @@ jobs:
           cd fenix
           git submodule update --init
           chmod +x gradlew
-          cd app
+
           ./gradlew clean assembleRelease
       # Uploads the folder or file in path to GitHub
       - name: Upload Apk
