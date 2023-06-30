@@ -8,7 +8,7 @@ on:
       - '**.md'
       - '.github/**'
   workflow_dispatch:
-  push:
+
 
 jobs:
   build_apk:
