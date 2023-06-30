@@ -50,17 +50,5 @@ jobs:
       - name: Upload Apk0
         uses: actions/upload-artifact@v2
         with:
-          name: ddg
-          path: fenix/app/build/outputs/
-
-      - name: Upload Apk1
-        uses: actions/upload-artifact@v2
-        with:
-          name: ddg1
-          path: fenix/app/build/
-          
-      - name: Upload Apk2
-        uses: actions/upload-artifact@v2
-        with:
-          name: ddg2
-          path: fenix/app/
+          name: fenix
+          path: fenix/app/build/outputs/apk/fenix/release/app-fenix-armeabi-v7a-release.apk
