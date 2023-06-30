@@ -10,8 +10,12 @@ on:
   workflow_dispatch:
   push:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build_apk:
+  build_apk:      
     name: Build apk
     runs-on: ubuntu-latest
     steps:
@@ -41,11 +45,22 @@ jobs:
           cd fenix
           git submodule update --init
           chmod +x gradlew
-
           ./gradlew clean assembleRelease
       # Uploads the folder or file in path to GitHub
-      - name: Upload Apk
+      - name: Upload Apk0
         uses: actions/upload-artifact@v2
         with:
           name: ddg
-          path: app/build/outputs/
+          path: fenix/app/build/outputs/
+
+      - name: Upload Apk1
+        uses: actions/upload-artifact@v2
+        with:
+          name: ddg1
+          path: fenix/app/build/
+          
+      - name: Upload Apk2
+        uses: actions/upload-artifact@v2
+        with:
+          name: ddg2
+          path: fenix/app/
