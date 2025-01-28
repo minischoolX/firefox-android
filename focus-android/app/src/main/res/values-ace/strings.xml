@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Böh nibak röt koh</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Pue Nyang Barô</string>
     <string name="menu_settings">Atô</string>
     <string name="menu_about">Bhaih</string>
     <string name="menu_help">Beunantu</string>
@@ -84,10 +83,6 @@
          sharing an URL. -->
     <string name="share_dialog_title">Bulueng röt</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
     <string name="notification_erase_text">Sampôh riwayat pumeuhah</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,23 +116,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">Mita lam Focus</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Mita lam Focus</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">Mita lam Klar</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Mita lam Klar</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">Mita lam Focus Beta</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Mita lam Focus Beta</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">Mita lam Focus Nightly</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Mita lam Focus Nightly</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s peuduek droeneuh lam keumudoe.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s peuduek droeneuh lam keumudoe.</p>
 <p>Ngui sibagoe browser rahsia:
   <ul>
     <li>Mita ngön lop lam aplikasi</li>
@@ -352,6 +347,9 @@
     <!-- A link to SUMO at the end of the summary (preference_mozilla_telemetry_summary2) of the "Send anonymous usage data" setting. -->
     <string name="preference_mozilla_telemetry_summary">Meurunoë lom</string>
 
+    <!-- %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <string name="preference_mozilla_telemetry_summary2">Mozilla geuôseuha keu geupeusaho nyang geupeureulèe mantöng keu geuseudiya dan geupeujroh %1$s keu bandum ureueng.</string>
+
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Reusam Privasi</string>
 
@@ -402,7 +400,11 @@
 
     <string name="search_add_error_empty_name">Peutamong nan meusén mita</string>
 
+    <string name="search_add_error_duplicate_name">Meusén mita nyang teupasang ka geungui nan nyan.</string>
+
     <string name="search_add_error_empty_search">Peutamong string mita</string>
+
+    <string name="search_add_error_format">Neuparéksa meunyo string meunita ka pah ngön beuntuk Miseue</string>
 
     <!-- Content description (not visible, for screen readers etc.): Clear text in URL bar -->
     <string name="content_description_clear_input">Peugléh teunamong</string>
@@ -467,6 +469,9 @@
 
     <string name="external_app_prompt_title">Peuhah link lam aplikasi laén</string>
 
+    <!-- This string is shown when the user has clicked a link that needs to be opened in a different app.
+         Argument 2 is the external app name, argument 1 is our name (i.e. Firefox Focus, or Firefox Klar). -->
+    <string name="external_app_prompt">Droeneuh jeuet neutinggai %1$s keu neupeuhah peunawôt nyoe bak %2$s.</string>
     <!-- This text is the title of a dialog shown if no app could be found for a custom link protocol. -->
     <string name="external_app_prompt_no_app_title">Mita saboh app nyang jeuet peuhah link</string>
 
@@ -483,10 +488,10 @@
     <!-- Snackbar action to immediately open the successfully downloaded file. -->
     <string name="download_snackbar_open">Peuhah</string>
 
-    <string name="error_hostLookup_title">Server hana geuteumeung</string>
+    <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Geutamah u röt koh!</string>
 
-    <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Tôp</string>
+    <string name="error_hostLookup_title">Server hana geuteumeung</string>
 
     <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
@@ -497,6 +502,10 @@
 
     <!-- New Onboarding flow first screen button label-->
     <string name="onboarding_first_screen_button_text">Puphôn</string>
+
+    <!-- Onboarding second screen: Title -->
+    <!-- %1$s will be replaced by the app short name(Focus) -->
+    <string name="onboarding_second_screen_title">%1$s kön lagèe browser laén</string>
 
     <!-- New Onboarding flow second screen make Focus default browser button label-->
     <string name="onboarding_second_screen_default_browser_button_text">Peujeuet sibagoe browser teutap</string>
@@ -544,7 +553,7 @@
 
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Cok keubah Firefox</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Cok keubah Firefox</string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Nan ureung ngui</string>
